@@ -1,7 +1,3 @@
-<script>
-  import { Search32 } from "carbon-icons-svelte";
-</script>
-
 <style>
   header {
     background-color: #FF9900;
@@ -69,7 +65,8 @@
 
       <input />
 
-      <button><Search32 /></button>
+      <!-- TODO: Use icon -->
+      <button>Search</button>
     </div>
   </div>
 </header>
