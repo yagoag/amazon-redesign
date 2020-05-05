@@ -1,6 +1,13 @@
-<style>
+<script>
+  import Icon from 'svelte-awesome';
+  import { shoppingCart, search } from 'svelte-awesome/icons';
+</script>
+
+<style type="text/scss">
   header {
-    background-color: #FF9900;
+    /* background-color: #ff9900; */
+    /* background-color: #283f47; */
+    background-color: #303030;
     padding: 24px 64px;
     display: flex;
   }
@@ -8,7 +15,8 @@
   img {
     width: 96px;
     height: 78px;
-    filter: grayscale(100%) brightness(150%) contrast(150%);
+    /* filter: grayscale(100%) brightness(150%) contrast(150%); */
+    filter: contrast(150%);
     margin-right: 48px;
   }
 
@@ -46,27 +54,51 @@
     border: none;
     background-color: #ffffff;
     height: 100%;
+    padding-right: 12px;
+  }
+
+  .right a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  button.cart {
+    background: none;
+    border: none;
+    color: #ffffff;
+  }
+
+  button.cart Icon {
   }
 </style>
 
 <header>
   <!-- TODO see how this will turn out after build -->
-  <img src="assets/images/logo-compact.png" alt={"Amazon logo"} />
+  <img src="assets/images/logo-compact.png" alt="Amazon logo" />
   <div class="center">
     <div id="search">
       <select id="search-section">
         <!-- TODO: create short and long names, showing only short for current -->
-        <option>All Departments</option>
+        <option>All</option>
         <option>Books</option>
         <option>Under $10</option>
         <option>Smart Home</option>
-        <option>Whole Foods Market</option>
+        <option>Whole Foods</option>
       </select>
 
       <input />
 
       <!-- TODO: Use icon -->
-      <button>Search</button>
+      <button>
+        <Icon data={search} />
+      </button>
     </div>
+  </div>
+  <div class="right">
+    <button class="cart">
+      <Icon data={shoppingCart} color="#ffffff" scale={2} />
+    </button>
+    <a href="#cart">Cart</a>
+    <a href="#signin">Sign In</a>
   </div>
 </header>
