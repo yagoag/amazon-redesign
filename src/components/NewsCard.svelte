@@ -7,7 +7,7 @@
 
 <style type="scss">
   .card {
-    width: 208px;
+    flex: 1;
     height: 288px;
     margin: 16px;
     padding: 16px;

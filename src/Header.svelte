@@ -11,13 +11,28 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     padding: 24px 64px;
     display: flex;
+    width: calc(100% - 128px);
+
+    #skip-nav {
+      position: absolute;
+      top: 10px;
+      background-color: #fafafa;
+      padding: 6px 8px;
+      border-radius: 2px;
+
+      &:not(:focus) {
+        z-index: -1;
+      }
+    }
   }
 
-  img {
-    width: 96px;
-    height: 78px;
-    filter: contrast(150%);
+  .homepage-link {
     margin-right: 48px;
+
+    .logo {
+      width: 96px;
+      height: 78px;
+    }
   }
 
   .center {
@@ -34,7 +49,6 @@
 
     select {
       border: none;
-      outline: none;
       /* appearance: none; */
       border-radius: 2px 0 0 2px;
       background-color: #dddddd;
@@ -44,7 +58,6 @@
 
     input {
       border: none;
-      outline: none;
       height: 100%;
       flex: 1;
     }
@@ -72,7 +85,13 @@
 </style>
 
 <header>
-  <img src="assets/images/logo-compact.png" alt="Amazon logo" />
+  <a id="skip-nav" tabindex="3" href="#main-content">Skip to main content</a>
+  <a class="homepage-link" href="/">
+    <img
+      class="logo"
+      src="assets/images/logo-compact-light.png"
+      alt="Amazon logo" />
+  </a>
   <div class="center">
     <div id="search">
       <select id="search-section">
