@@ -4,21 +4,51 @@
 </script>
 
 <style>
-  .hero {
-    max-height: 200px;
+  a.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(0deg, transparent 0%, #bbcae9 100%);
+    background-repeat: no-repeat;
+    padding: 24px 0 16px 0;
+  }
+
+  .hero .text {
+    text-align: right;
+    margin-right: -96px;
+  }
+  .hero .text p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3363cd;
+    margin: 6px 0;
+  }
+
+  .hero .text p.small {
+    font-size: 16px;
+    font-weight: normal;
+    color: #1a3166;
   }
 
   .hero img {
+    /* width: 100%; */
     width: 100%;
+    max-width: 400px;
+    height: auto;
   }
 
   .content {
-    margin: 0 64px;
+    padding: 0 64px;
   }
 
   .news {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .horizontal-card {
@@ -47,11 +77,16 @@
 
 <main>
   <Header />
-  <div class="hero">
+
+  <a class="hero" href="#buy-prime">
+    <div class="text">
+      <p>There's a lot to watch on Prime Video</p>
+      <p class="small">Included with Prime</p>
+    </div>
     <img
-      src="https://images-na.ssl-images-amazon.com/images/G/01/digital/video/merch/2019/Other/RB-1424_AcquisitionHolidayAssets/GW_DesktopHero_RB-1424_PV-AcquisitionHolidayAssets_3000x1200._CB451871227_.jpg"
-      alt="So much to watch, included with Prime" />
-  </div>
+      src="/assets/images/rafiki-movie-night.svg"
+      alt="couple on a couch eating popcorn" />
+  </a>
 
   <div class="content">
     <div class="news">
