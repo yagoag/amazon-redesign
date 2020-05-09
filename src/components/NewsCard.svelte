@@ -9,7 +9,7 @@
   .card {
     width: 208px;
     height: 288px;
-    margin: 24px;
+    margin: 16px;
     padding: 16px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     background-color: #5c5c5c;

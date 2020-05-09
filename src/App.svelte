@@ -56,20 +56,25 @@
   <div class="content">
     <div class="news">
       <NewsCard
-        img="https://images-na.ssl-images-amazon.com/images/G/01/Anything/test/images/detail/Gateway_graphics/covid_safety_G_2X._SY608_CB433132410_.jpg"
-        title="How we’re taking care of employees"
-        subhead="Learn more at blog.aboutamazon.com"
-        href="#employee-care" />
+        img="https://images.pexels.com/photos/4057728/pexels-photo-4057728.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=240"
+        title="Get fit at home"
+        subhead="Explore Now"
+        href="#fit-at-home" />
       <NewsCard
-        img="https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2020/WeeklyBuild/042420/042420_SamDemiAtHome_GWDesktop_SingleImageCard_758x608._SY608_CB433303538_.jpg"
-        title="Sam and Demi - at home playlist"
+        img="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=240"
+        title="Our Summer playlist is out"
         subhead="Listen on Amazon Music"
         href="#playlist" />
       <NewsCard
-        img="https://images-na.ssl-images-amazon.com/images/G/01/Gateway/COVID19/donation_COVID_desktop_2x._SY608_CB420065185_.jpg"
-        title="Donate to COVID-19 response"
+        img="https://images.pexels.com/photos/2647753/pexels-photo-2647753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=240"
+        title="Freedom of expression in our workplace"
         subhead="Learn more"
-        href="#donate" />
+        href="#freedom" />
+      <NewsCard
+        img="https://images.pexels.com/photos/3843273/pexels-photo-3843273.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=240"
+        title="New release on Prime Video"
+        subhead="Check it out"
+        href="#prime-video-release" />
     </div>
 
     <div class="horizontal-card">
