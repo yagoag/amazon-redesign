@@ -1,5 +1,6 @@
 <script>
   import Header from './Header.svelte';
+  import NewsCard from './components/NewsCard.svelte';
 </script>
 
 <style>
@@ -15,54 +16,9 @@
     margin: 0 64px;
   }
 
-  .card-container {
+  .news {
     display: flex;
     flex-direction: row;
-  }
-
-  .card {
-    width: 208px;
-    height: 288px;
-    margin: 24px;
-    padding: 16px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-    background-color: #8a8a8a;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 600;
-    text-decoration: none;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    transition: all 200ms;
-  }
-
-  .card:first-child {
-    margin-left: 0;
-  }
-
-  .card:last-child {
-    margin-right: 0;
-  }
-
-  .card:hover {
-    background-blend-mode: screen;
-  }
-
-  .card:hover .link-title {
-    color: #b36c03;
-    font-size: 16px;
-  }
-
-  .card .link-title {
-    font-size: 0;
-    font-weight: normal;
-    /* color: #de8501; */
-    text-shadow: none;
-    transition: all 200ms;
   }
 
   .horizontal-card {
@@ -98,23 +54,22 @@
   </div>
 
   <div class="content">
-    <div class="card-container">
-      <a
-        class="card"
-        style="background-image:
-        url(https://images-na.ssl-images-amazon.com/images/G/01/Anything/test/images/detail/Gateway_graphics/covid_safety_G_2X._SY608_CB433132410_.jpg);"
-        href="#employee-care">
-        <div>How we’re taking care of employees</div>
-        <div class="link-title">Learn more at blog.aboutamazon.com</div>
-      </a>
-      <a
-        class="card"
-        style="background-image:
-        url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2020/WeeklyBuild/042420/042420_SamDemiAtHome_GWDesktop_SingleImageCard_758x608._SY608_CB433303538_.jpg);"
-        href="#playlist">
-        <div>Sam and Demi - at home playlist</div>
-        <div class="link-title">Listen on Amazon Music</div>
-      </a>
+    <div class="news">
+      <NewsCard
+        img="https://images-na.ssl-images-amazon.com/images/G/01/Anything/test/images/detail/Gateway_graphics/covid_safety_G_2X._SY608_CB433132410_.jpg"
+        title="How we’re taking care of employees"
+        subhead="Learn more at blog.aboutamazon.com"
+        href="#employee-care" />
+      <NewsCard
+        img="https://images-na.ssl-images-amazon.com/images/G/01/AmazonMusic/2020/WeeklyBuild/042420/042420_SamDemiAtHome_GWDesktop_SingleImageCard_758x608._SY608_CB433303538_.jpg"
+        title="Sam and Demi - at home playlist"
+        subhead="Listen on Amazon Music"
+        href="#playlist" />
+      <NewsCard
+        img="https://images-na.ssl-images-amazon.com/images/G/01/Gateway/COVID19/donation_COVID_desktop_2x._SY608_CB420065185_.jpg"
+        title="Donate to COVID-19 response"
+        subhead="Learn more"
+        href="#donate" />
     </div>
 
     <div class="horizontal-card">
