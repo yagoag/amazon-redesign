@@ -1,6 +1,7 @@
 <script>
   import Icon from 'svelte-awesome';
-  import { shoppingCart, search } from 'svelte-awesome/icons';
+  import { search } from 'svelte-awesome/icons';
+  import CartLink from './components/CartLink.svelte';
 </script>
 
 <style type="scss">
@@ -32,47 +33,45 @@
     display: inline-flex;
 
     select {
-    border: none;
-    outline: none;
+      border: none;
+      outline: none;
       /* appearance: none; */
-    border-radius: 2px 0 0 2px;
-    background-color: #dddddd;
-    height: 100%;
-    /* TODO: Width should be just enough to fit content */
-  }
+      border-radius: 2px 0 0 2px;
+      background-color: #dddddd;
+      height: 100%;
+      /* TODO: Width should be just enough to fit content */
+    }
 
     input {
-    border: none;
-    outline: none;
-    height: 100%;
-    flex: 1;
-  }
+      border: none;
+      outline: none;
+      height: 100%;
+      flex: 1;
+    }
 
     button {
-    border: none;
-    background-color: #ffffff;
-    height: 100%;
-    padding-right: 12px;
-  }
-  }
-
-  .right a {
-    color: #ffffff;
-    text-decoration: none;
-    /* display: flex;
-    flex-direction: row;
-		*/
+      border: none;
+      background-color: #ffffff;
+      height: 100%;
+      padding-right: 12px;
+    }
   }
 
-  button.cart {
-    background: none;
-    border: none;
-    color: #ffffff;
+  .options {
+    margin: 0 0 40px 32px;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 16px;
+    }
   }
 </style>
 
 <header>
-  <!-- TODO see how this will turn out after build -->
   <img src="assets/images/logo-compact.png" alt="Amazon logo" />
   <div class="center">
     <div id="search">
@@ -92,11 +91,8 @@
       </button>
     </div>
   </div>
-  <div class="right">
-    <button class="cart">
-      <Icon data={shoppingCart} color="#ffffff" scale={2} />
-    </button>
-    <a href="#cart">Cart</a>
+  <div class="options">
+    <CartLink />
     <a href="#signin">Sign In</a>
   </div>
 </header>
