@@ -3,11 +3,11 @@
   import { shoppingCart, search } from 'svelte-awesome/icons';
 </script>
 
-<style type="text/scss">
+<style type="scss">
   header {
-    /* background-color: #ff9900; */
-    /* background-color: #283f47; */
     background-color: #303030;
+    background: linear-gradient(0deg, #303030 50%, #3a3a3a 100%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     padding: 24px 64px;
     display: flex;
   }
@@ -15,7 +15,6 @@
   img {
     width: 96px;
     height: 78px;
-    /* filter: grayscale(100%) brightness(150%) contrast(150%); */
     filter: contrast(150%);
     margin-right: 48px;
   }
@@ -31,44 +30,44 @@
     height: 40px;
     width: 100%;
     display: inline-flex;
-  }
 
-  #search select {
+    select {
     border: none;
     outline: none;
-    appearance: none;
+      /* appearance: none; */
     border-radius: 2px 0 0 2px;
     background-color: #dddddd;
     height: 100%;
     /* TODO: Width should be just enough to fit content */
   }
 
-  #search input {
+    input {
     border: none;
     outline: none;
     height: 100%;
     flex: 1;
   }
 
-  #search button {
+    button {
     border: none;
     background-color: #ffffff;
     height: 100%;
     padding-right: 12px;
   }
+  }
 
   .right a {
     color: #ffffff;
     text-decoration: none;
+    /* display: flex;
+    flex-direction: row;
+		*/
   }
 
   button.cart {
     background: none;
     border: none;
     color: #ffffff;
-  }
-
-  button.cart Icon {
   }
 </style>
 
@@ -88,7 +87,6 @@
 
       <input />
 
-      <!-- TODO: Use icon -->
       <button>
         <Icon data={search} />
       </button>

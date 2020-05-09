@@ -5,7 +5,7 @@
   export let href;
 </script>
 
-<style>
+<style type="scss">
   .card {
     width: 208px;
     height: 288px;
@@ -24,32 +24,31 @@
     text-decoration: none;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     transition: all 200ms;
-  }
 
-  .card:first-child {
-    margin-left: 0;
-  }
+    &:first-child {
+      margin-left: 0;
+    }
 
-  .card:last-child {
-    margin-right: 0;
-  }
+    &:last-child {
+      margin-right: 0;
+    }
 
-  .card:hover,
-  .card:focus {
-    background-blend-mode: multiply;
-  }
+    &:hover,
+    &:focus {
+      background-blend-mode: multiply;
 
-  .card:hover .link-title,
-  .card:focus .link-title {
-    color: #ff9900;
-    font-size: 16px;
-  }
+      .link-title {
+        font-size: 16px;
+      }
+    }
 
-  .card .link-title {
-    font-size: 0;
-    font-weight: normal;
-    text-shadow: none;
-    transition: all 200ms;
+    .link-title {
+      color: #ff9900;
+      font-size: 0;
+      font-weight: normal;
+      text-shadow: none;
+      transition: all 200ms;
+    }
   }
 </style>
 

@@ -3,7 +3,7 @@
   import NewsCard from './components/NewsCard.svelte';
 </script>
 
-<style>
+<style type="scss">
   a.hero {
     text-align: center;
     display: flex;
@@ -15,30 +15,30 @@
     background-image: linear-gradient(0deg, transparent 0%, #bbcae9 100%);
     background-repeat: no-repeat;
     padding: 24px 0 16px 0;
-  }
 
-  .hero .text {
-    text-align: right;
-    margin-right: -96px;
-  }
-  .hero .text p {
-    font-size: 20px;
-    font-weight: 600;
-    color: #3363cd;
-    margin: 6px 0;
-  }
+    .text {
+      text-align: right;
+      margin-right: -96px;
 
-  .hero .text p.small {
-    font-size: 16px;
-    font-weight: normal;
-    color: #1a3166;
-  }
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3363cd;
+        margin: 6px 0;
+      }
 
-  .hero img {
-    /* width: 100%; */
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+      p.small {
+        font-size: 16px;
+        font-weight: normal;
+        color: #1a3166;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
   }
 
   .content {
@@ -54,24 +54,23 @@
   .horizontal-card {
     height: 320px;
     margin: 20px 0;
-  }
 
-  .horizontal-card .title {
-    font-size: 24px;
-    font-weight: 500;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    margin: 0 0 16px 0;
-  }
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+      margin: 0 0 16px 0;
+    }
+    .books {
+      display: inline-block;
+      height: 200px;
+      overflow: hidden;
 
-  .horizontal-card .books {
-    display: inline-block;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .horizontal-card .books .book-cover {
-    height: 200px;
-    width: auto;
+      .book-cover {
+        height: 200px;
+        width: auto;
+      }
+    }
   }
 </style>
 
