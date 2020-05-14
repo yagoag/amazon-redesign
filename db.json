@@ -1,0 +1,95 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Lord of the Rings",
+      "author": "J. R. R. Tolkien",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/e/e9/First_Single_Volume_Edition_of_The_Lord_of_the_Rings.gif",
+      "price": 2199
+    },
+    {
+      "id": 2,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/c/c4/TheAlchemist.jpg",
+      "price": 1999
+    },
+    {
+      "id": 3,
+      "title": "The Little Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/0/05/Littleprince.JPG",
+      "price": 1299
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J. K. Rowling",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg",
+      "price": 2099
+    },
+    {
+      "id": 5,
+      "title": "The Master and Margarita",
+      "author": "Mikhail Bulgakov",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/MasterandMargaritaFirstEdition.jpg/440px-MasterandMargaritaFirstEdition.jpg",
+      "price": 2599
+    },
+    {
+      "id": 6,
+      "title": "Alice's Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Alice%27s_Adventures_in_Wonderland_cover_%281865%29.jpg/440px-Alice%27s_Adventures_in_Wonderland_cover_%281865%29.jpg",
+      "price": 2099
+    },
+    {
+      "id": 7,
+      "title": "The Hobbit",
+      "author": "J. R. R. Tolkien",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/4/4a/TheHobbit_FirstEdition.jpg",
+      "price": 2199
+    },
+    {
+      "id": 8,
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/2/26/And_Then_There_Were_None_US_First_Edition_Cover_1940.jpg",
+      "price": 1599
+    },
+    {
+      "id": 9,
+      "title": "Dream of the Red Chamber",
+      "author": "Cao Xueqin",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/7/79/Hongloumeng2.jpg",
+      "price": 2399
+    },
+    {
+      "id": 10,
+      "title": "The Lion, the Witch and the Wardrobe",
+      "author": "C. S. Lewis",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/8/86/TheLionWitchWardrobe%281stEd%29.jpg",
+      "price": 2099
+    },
+    {
+      "id": 11,
+      "title": "She: A History of Adventure",
+      "author": "H. Rider Haggard",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/SHE%2C_A_History_of_Adventure_%281st_Edition_Cover%29%2C_by_H._Rider_Haggard.jpg/440px-SHE%2C_A_History_of_Adventure_%281st_Edition_Cover%29%2C_by_H._Rider_Haggard.jpg",
+      "price": 2299
+    },
+    {
+      "id": 12,
+      "title": "The Adventures of Pinocchio",
+      "author": "Carlo Collodi",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Pinocchio.jpg/380px-Pinocchio.jpg",
+      "price": 1799
+    },
+    {
+      "id": 13,
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/6/6b/DaVinciCode.jpg",
+      "price": 1499
+    }
+  ]
+}
