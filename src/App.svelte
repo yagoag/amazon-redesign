@@ -1,6 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
+  import api from './api';
   import Header from './Header.svelte';
   import NewsCard from './components/NewsCard.svelte';
+
+  let books;
+
+  onMount(async () => {
+    api.get('/books').then((data) => (books = data));
+  });
 </script>
 
 <style type="scss">
@@ -85,6 +93,11 @@
       .book-cover {
         height: 200px;
         width: auto;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
       }
     }
   }
@@ -132,30 +145,12 @@
     <div class="horizontal-card">
       <h4 class="title">Best sellers in Kindle eBooks</h4>
       <div class="books">
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/91tK-LBCGML._AC_SY400_.jpg"
-          alt="Don't Make A Sound by T.R. Ragan" />
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/81QSPx4xxRL._AC_SY400_.jpg"
-          alt="Legacy Of Lies by Robert Bailey" />
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/81YarSHhRbL._AC_SY400_.jpg"
-          alt="Sorry I Missed You by Suzy Krause" />
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/91vXZFo4EpL._AC_SY400_.jpg"
-          alt="Your Blue Is Not My Blue by Aspen Matis" />
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/81n1G6Cp7wL._AC_SY400_.jpg"
-          alt="The Bad Seed by Jory John" />
-        <img
-          class="book-cover"
-          src="https://images-na.ssl-images-amazon.com/images/I/51eAMQG-GkL._AC_SY200_.jpg"
-          alt="The Girl Who Lived by Christopher Greyson" />
+        {#if books}
+          {#each books as book}
+            <img class="book-cover" src={book.cover} alt={book.title} />
+          {/each}
+          <!-- TODO: else show a loading skeleton -->
+        {/if}
       </div>
     </div>
   </div>
