@@ -11,7 +11,6 @@
     height: 288px;
     margin: 16px;
     padding: 16px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     background-color: #5c5c5c;
     background-size: cover;
     background-position: center;
@@ -24,6 +23,10 @@
     text-decoration: none;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     transition: all 200ms;
+
+    &:not(:focus) {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+    }
 
     &:first-child {
       margin-left: 0;
