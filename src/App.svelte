@@ -4,9 +4,11 @@
   import Header from './Header.svelte';
   import NewsCard from './components/NewsCard.svelte';
 
+  let newsList;
   let books;
 
   onMount(async () => {
+    api.get('/news').then((data) => (newsList = data));
     api.get('/books').then((data) => (books = data));
   });
 </script>
@@ -120,26 +122,12 @@
 
   <div class="content">
     <div class="news">
-      <NewsCard
-        img="https://images.pexels.com/photos/4057728/pexels-photo-4057728.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=320"
-        title="Get fit at home"
-        subhead="Explore Now"
-        href="#fit-at-home" />
-      <NewsCard
-        img="https://images.pexels.com/photos/1699161/pexels-photo-1699161.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=320"
-        title="Our Summer playlist is out"
-        subhead="Listen on Amazon Music"
-        href="#playlist" />
-      <NewsCard
-        img="https://images.pexels.com/photos/2647753/pexels-photo-2647753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=320"
-        title="Freedom of expression in our workplace"
-        subhead="Learn more"
-        href="#freedom" />
-      <NewsCard
-        img="https://images.pexels.com/photos/3843273/pexels-photo-3843273.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=320&w=320"
-        title="New release on Prime Video"
-        subhead="Check it out"
-        href="#prime-video-release" />
+      {#if newsList}
+        {#each newsList as news}
+          <NewsCard {...news} />
+        {/each}
+        <!-- TODO: else show a loading skeleton -->
+      {/if}
     </div>
 
     <div class="horizontal-card">
