@@ -3,6 +3,7 @@
   import api from './api';
   import Header from './Header.svelte';
   import NewsCard from './components/NewsCard.svelte';
+  import CardCarousel from './components/CardCarousel.svelte';
 
   let newsList;
   let books;
@@ -87,19 +88,14 @@
       text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
       margin: 0 0 16px 0;
     }
-    .books {
-      display: inline-block;
+
+    .book-cover {
       height: 200px;
-      overflow: hidden;
+      width: auto;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 
-      .book-cover {
-        height: 200px;
-        width: auto;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-
-        &:not(:last-child) {
-          margin-right: 16px;
-        }
+      &:not(:last-child) {
+        margin-right: 16px;
       }
     }
   }
@@ -132,14 +128,14 @@
 
     <div class="horizontal-card">
       <h4 class="title">Best sellers in Kindle eBooks</h4>
-      <div class="books">
+      <CardCarousel>
         {#if books}
           {#each books as book}
             <img class="book-cover" src={book.cover} alt={book.title} />
           {/each}
           <!-- TODO: else show a loading skeleton -->
         {/if}
-      </div>
+      </CardCarousel>
     </div>
   </div>
 </main>
