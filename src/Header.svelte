@@ -101,12 +101,12 @@
         padding: 0;
         text-align: left;
         cursor: pointer;
-        margin-right: 4px;
+        margin: -4px -4px -4px -8px;
+        padding: 4px 8px;
 
         &:hover {
-          border: 1px solid #ffffff;
-          margin: -4px -4px -4px -8px;
           padding: 3px 7px;
+          border: 1px solid #ffffff;
         }
 
         .info {
